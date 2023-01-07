@@ -20,11 +20,11 @@ import (
 const res = "https://gitcode.net/u011570312/zbpdata/-/raw/main/Atri/"
 
 func init() { // 插件主体
-	engine := control.Register("atri", &ctrl.Options[*zero.Ctx]{
+	engine := control.Register("灰风", &ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
 		Brief:            "atri人格文本回复",
 		Help: "本插件基于 ATRI ，为 Golang 移植版\n" +
-			"- ATRI醒醒\n- ATRI睡吧\n- 萝卜子\n- 喜欢 | 爱你 | 爱 | suki | daisuki | すき | 好き | 贴贴 | 老婆 | 亲一个 | mua\n" +
+			"- 灰风醒醒\n- 灰风睡吧\n- 萝卜子\n- 喜欢 | 爱你 | 爱 | suki | daisuki | すき | 好き | 贴贴 | 老婆 | 亲一个 | mua\n" +
 			"- 草你妈 | 操你妈 | 脑瘫 | 废柴 | fw | 废物 | 战斗 | 爬 | 爪巴 | sb | SB | 傻B\n- 早安 | 早哇 | 早上好 | ohayo | 哦哈哟 | お早う | 早好 | 早 | 早早早\n" +
 			"- 中午好 | 午安 | 午好\n- 晚安 | oyasuminasai | おやすみなさい | 晚好 | 晚上好\n- 高性能 | 太棒了 | すごい | sugoi | 斯国一 | よかった\n" +
 			"- 没事 | 没关系 | 大丈夫 | 还好 | 不要紧 | 没出大问题 | 没伤到哪\n- 好吗 | 是吗 | 行不行 | 能不能 | 可不可以\n- 啊这\n- 我好了\n- ？ | ? | ¿\n" +
@@ -105,7 +105,7 @@ func init() { // 插件主体
 				process.SleepAbout1sTo2s()
 				ctx.SendChain(message.Reply(ctx.Event.MessageID), randText(
 					"午安w",
-					"午觉要好好睡哦，ATRI会陪伴在你身旁的w",
+					"午觉要好好睡哦，灰风会陪伴在你身旁的w",
 					"嗯哼哼~睡吧，就像平常一样安眠吧~o(≧▽≦)o",
 					"睡你午觉去！哼唧！！",
 				))
@@ -135,7 +135,7 @@ func init() { // 插件主体
 			case now >= 11 && now < 15:
 				ctx.SendChain(message.Reply(ctx.Event.MessageID), randText(
 					"午安w",
-					"午觉要好好睡哦，ATRI会陪伴在你身旁的w",
+					"午觉要好好睡哦，灰风会陪伴在你身旁的w",
 					"嗯哼哼~睡吧，就像平常一样安眠吧~o(≧▽≦)o",
 					"睡你午觉去！哼唧！！",
 				))
@@ -233,6 +233,16 @@ func init() { // 插件主体
 			process.SleepAbout1sTo2s()
 			ctx.SendChain(randText("我无法回应你的请求"))
 		})
+	engine.OnKeyword("什么是圣遗物", isAtriSleeping).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+		process.SleepAbout1sTo2s()
+		ctx.SendChain(randText("这是一个很古老的故事了，但并不冗长。\n最早一批行商聚在一起并且确立了行商联盟之后，每年经过这个贸易站的一\n小部分货物都会被封存起来，放入一个密封的容器里面，然后放在贸易站最\n底层的货舱中。\n这项传统从很久以前就一直流传到了 现在，现在货舱被填满了。\n那我们也该是时候出售这些圣遗物了。"))
+		})
+	engine.OnKeyword("圣遗物里有什么", isAtriSleeping).SetBlock(true).
+		Handle(func(ctx *zero.Ctx) {
+		process.SleepAbout1sTo2s()
+		ctx.SendChain(randText("这个我们无法得知，只有买了的人才能知晓。\n我们知道的是，这里面的东西曾经某个时候肯定有某种价值。\n虽然有证据表明圣遗物里面的东西有可能是发疯的人故意放进去用过的垃圾"))
+	})
 }
 
 func randText(text ...string) message.MessageSegment {
