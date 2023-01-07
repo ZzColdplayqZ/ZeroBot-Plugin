@@ -15,7 +15,7 @@ import (
 )
 
 func init() {
-	en := control.Register("open", &ctrl.Options[*zero.Ctx]{
+	en := control.Register("hangshang", &ctrl.Options[*zero.Ctx]{
 		DisableOnDefault: false,
 		Brief:            "行商抽奖模拟器",
 		Help:             "- 打开圣遗物",
