@@ -63,7 +63,7 @@ import (
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/aipaint"       // ai绘图
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/b14"           // base16384加解密
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/baidu"         // 百度一下
-       // _ "github.com/FloatTech/ZeroBot-Plugin/plugin/hangshang"       //行商
+        _ "github.com/FloatTech/ZeroBot-Plugin/plugin/hangshang"       //行商
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/baiduaudit"    // 百度内容审核
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/base64gua"     // base64卦加解密
 	// _ "github.com/FloatTech/ZeroBot-Plugin/plugin/baseamasiro"   // base天城文加解密
@@ -117,7 +117,7 @@ import (
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/quan"          // QQ权重查询
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/qzone"         // qq空间表白墙
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/realcugan"     // realcugan清晰术
-	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/reborn"        // 投胎
+	//_ "github.com/FloatTech/ZeroBot-Plugin/plugin/reborn"        // 投胎
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/runcode"       // 在线运行代码
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/saucenao"      // 以图搜图
 	_ "github.com/FloatTech/ZeroBot-Plugin/plugin/scale"         // 叔叔的AI二次元图片放大
